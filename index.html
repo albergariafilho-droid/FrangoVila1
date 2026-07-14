@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    
+    <!-- Title -->
+    <title>Franguinho da Vila - PDV & Pedidos</title>
+
+    <!-- PWA & Mobile Optimization Meta Tags -->
+    <meta name="theme-color" content="#ea580c" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Franguinho" />
+    
+    <!-- Icons and Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    
+    <!-- Disable text selection zoom on touch devices -->
+    <style>
+      body {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        margin: 0;
+        padding: 0;
+        overscroll-behavior-y: contain; /* Prevent pull-to-refresh inside standalone app */
+      }
+      /* Allow text selection in input boxes */
+      input, textarea {
+        -webkit-user-select: text;
+        user-select: text;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-900 text-slate-100 antialiased overflow-x-hidden selection:bg-orange-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Register Service Worker for PWA Android Installability -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((reg) => {
+              console.log('🚀 Service Worker registrado com sucesso:', reg.scope);
+            })
+            .catch((err) => {
+              console.error('❌ Falha ao registrar o Service Worker:', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
+

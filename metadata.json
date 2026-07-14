@@ -1,0 +1,6 @@
+{
+  "name": "Franguinho da Vila",
+  "description": "Sistema completo Franguinho da Vila: Frente de Caixa (PDV), controle de estoque em tempo real, aplicativo de pedidos do cliente com cadastro de conta, reordenamento, preferências e notificações push simuladas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

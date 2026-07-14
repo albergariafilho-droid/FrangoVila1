@@ -1,0 +1,25 @@
+{
+  "name": "Franguinho da Vila - PDV & Pedidos",
+  "short_name": "Franguinho",
+  "description": "Sistema de Lançamento de Vendas, Caixa e Pedidos p/ Mesa do Franguinho da Vila.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#ea580c",
+  "orientation": "portrait-primary",
+  "categories": ["food", "productivity"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
